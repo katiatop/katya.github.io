@@ -9,4 +9,9 @@ window.onscroll = function() {
 Fancybox.bind("[data-fancybox]", {
     // Your custom options
   });
+
+AOS.init({
+duration: 1200
+});
+  
   
