@@ -88,6 +88,15 @@ img {
     padding-top: 7px;
     padding-bottom: 7px;
     background-color: white;
+    box-shadow: var(--shadow);
+}
+
+.navbar-toggler {
+    border-radius: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
 }
 
 @media (min-width: 992px) {
@@ -102,7 +111,8 @@ img {
     color: var(--c-dark);
 }
 
-.navbar .navbar-nav .nav-link:hover {
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:active {
     color: var(--c-brand);
 }
 
@@ -152,7 +162,7 @@ img {
 /* Home */
 #home {
     background-image: url(../images/hero-remove.png);
-    background-position: center;
+    background-position: right;
     background-size: 70%;
     background-repeat: no-repeat;
 }
@@ -227,4 +237,87 @@ img {
 
 .project:hover img {
     transform: translateY(-100%);
+}
+
+/* Client */
+.client {
+    margin-top: -1px;
+    margin-left: -1px;
+    position: relative;
+}
+
+.client img {
+    opacity: 0.8;
+    width: 50%;
+    margin-left: 50px;
+}
+
+/* Resume */
+.eduexp {
+    position: relative;
+}
+
+.eduexp::before {
+    content: '';
+    height: 100%;
+    width: 2px;
+    background-color: var(--c-brand);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.eduexp::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    /* border-radius: 100px; */
+    background-color: var(--c-brand);
+    position: absolute;
+    top: 0;
+    left: -6px;
+}
+
+#contact .form-control {
+    border-radius: 0;
+}
+
+#contact .form-control:focus {
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--c-dark);
+    padding-top: 80px;
+}
+
+footer h4 {
+    color: white;
+}
+
+footer p,
+footer a,
+footer li a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
